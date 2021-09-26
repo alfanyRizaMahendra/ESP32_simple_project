@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel ESP32</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <header> ESP32 Control Panel </header>
+        <main>
+            <form name="myForm" action="" method="get">
+
+                <h3>Write Your API down below :</h3>
+                <div class="api">
+                    <input type="text" id="ip" class="ip" placeholder="API Key"></input>
+                </div>
+
+                <div class="controlContainer">
+
+                    <p>Choose your LED : </p>
+                    <input type="radio" id="led" value="led1" name="led" checked="checked">
+                    <label for="led1">led 1</label>
+
+                    <input type="radio" id="led" value="led2" name="led">
+                    <label for="led2">led 2</label>
+                    <br>
+
+                    <p>Change Your LED State : </p>
+                    <ul>
+                        <li class="on">
+                            <button type="button" id="on" class="button" >ON</button>
+                        </li>
+                        <li class="off">
+                            <button type="button" id="off" class="button" >OFF</button>
+                        </li>
+                    </ul>
+
+                    <input type="checkbox" id="enabled">
+                    <label for="enabled">PWM Enabled</label> 
+
+                    <input type="range" min="1" max="255" value="128" class="slider" id="myRange">
+                    <p>PWM Value : <span id="nilai"></span></p>
+                    
+                    <br>
+                    <p>Activity log</p>
+                    <div class="loggerContainer">
+                        <textarea name="logger" id="logger" class="ip" placeholder="ACTIVITY LOGS" readonly></textarea>
+
+                        <button type="button" id="delete" class="delete" >Delete History</button>
+                    </div>
+                </div>
+          </form>
+        </main>
+        <footer>
+            <h3>Created by : Alfany Riza Mahendra (1110181015)</h3>
+            <h3>Politeknik Elektronika Negeri Surabaya</h3>
+        </footer>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
